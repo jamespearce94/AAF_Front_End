@@ -17,14 +17,15 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-
+import { LoginComponent } from './login/login.component';
 export function main() {
 
   describe('App component', () => {
 
     let config: Route[] = [
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent }
+      { path: 'about', component: AboutComponent},
+      { path: 'login', component: LoginComponent}
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
@@ -33,7 +34,7 @@ export function main() {
           NavbarComponent, AppComponent,
           HomeComponent, AboutComponent],
         providers: [
-          { provide: APP_BASE_HREF, useValue: '/' }
+          { provide: APP_BASE_HREF, useValue: 'about' }
         ]
       });
     });
@@ -59,6 +60,3 @@ export function main() {
 
 class TestComponent {
 }
-
-
-
