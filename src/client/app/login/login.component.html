@@ -1,39 +1,15 @@
-<div>
-    <div role="main">
-        <div class="row">
-
-
-            <div class="col-xs-10 col-sm-6 col-md-6 col-lg-4 col-xs-offset-1 col-sm-offset-3 col-md-offset-3 col-lg-offset-4">
-                <div class="card card-container" *ngIf="action == 'login'">
-                    <img class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-                    <p class="profile-name-card"> Welcome </p>
-                    <div class="form-signin">
-                        <span class="reauth-email"></span>
-                        <input type="email" class="form-control" placeholder="Username" required autofocus>
-
-                        <input type="password" class="form-control" placeholder="Password" required>
-
-                        <button class="btn btn-lg btn-success btn-block btn-signin" (click)="login()">Login</button>
-                        <button class="btn btn-lg btn-success btn-block btn-signin" (click)="action = 'register'">Sign up</button>
-                        <button class="btn btn-lg btn-success btn-block btn-signin">Forgot password</button>
-                    </div><!-- /form -->
-                </div><!-- /card-container -->
-
-                <div class="card card-container" *ngIf="action == 'register'">
-                    <img class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-                    <p class="profile-name-card"> Welcome </p>
-                    <div class="form-signin">
-                        <span class="reauth-email"></span>
-                        <input type="email" class="form-control" placeholder="Username" required autofocus>
-                        <input type="text" class="form-control" placeholder="First name" required>
-                        <input type="text" class="form-control" placeholder="Last name" required>
-                        <input type="password" class="form-control" placeholder="Password" required>
-                        <input type="password" class="form-control" placeholder="Confirmation" required>
-                        <button class="btn btn-lg btn-success btn-block btn-signin" (click)="register()">Register</button>
-                        <button class="btn btn-lg btn-success btn-block btn-signin" (click)="action = 'login'">Back to login</button>
-                    </div><!-- /form -->
-                </div><!-- /card-container -->
-            </div>
-        </div>
-    </div>
-</div>
+  <p> Welcome </p>
+          <span class="reauth-email"></span>
+            <input type="email"  placeholder="Username" required autofocus>
+            <input type="password"  placeholder="Password" required>
+                      <button >Login</button>
+                      <button >Sign up</button>
+                      <button >Forgot password</button>
+                      <p> Welcome </p>
+                      <input type="email" class="form-control" placeholder="Username" required autofocus>
+                      <input type="text" class="form-control" placeholder="First name" required>
+                      <input type="text" class="form-control" placeholder="Last name" required>
+                      <input type="password" class="form-control" placeholder="Password" required>
+                      <input type="password" class="form-control" placeholder="Confirmation" required>
+                      <button >Register</button>
+                      <button >Back to login</button>
