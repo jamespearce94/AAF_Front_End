@@ -1,21 +1,21 @@
 <div class="container">
   <div class="jumbotron text-center">
-    <h1>{{todos.length}}&nbsp;<span class="label label-info">Things to do</span></h1>
+    <h1>{{todos.length}}&nbsp;<span class="label label-info">Recent Activity</span></h1>
   </div>
   <div class="row">
 
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th class="text-center">Todos</th>
+            <th class="text-center">Past week</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let todo of todos">
             <td>
-              <input type="checkbox" (click)="deleteTodo(todo._id)" bind-checked="false"/>&nbsp;&nbsp;
+              <input type="checkbox"  bind-checked="false"/>&nbsp;&nbsp;
              </td>
-            <td>{{todo.text}} {{todo.activityID}}<br/>
+            <td>{{todo.text}}<br/>
               {{todo.activityDate}}
             </td>
           </tr>

@@ -21,7 +21,7 @@ export class NameListService {
    * @return {string[]} The Observable for the HTTP request.
    */
   get(): Observable<string[]> {
-    return this.http.get('https://backend-scottspittle.c9users.io/api/todos')
+    return this.http.get('//127.0.0.1:3000/todos')
                     .map((res: Response) => res.json())
     //              .do(data => console.log('server data:', data))  // debug
                     .catch(this.handleError);
@@ -39,4 +39,3 @@ export class NameListService {
     return Observable.throw(errMsg);
   }
 }
-

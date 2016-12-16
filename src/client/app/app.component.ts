@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Config } from './shared/index';
+
+import { Router } from '@angular/router';
 import './operators';
 
 /**
@@ -11,7 +13,8 @@ import './operators';
   templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  constructor() {
+  constructor( private router : Router) {
+    this.router = router;
     console.log('Environment config', Config);
   }
 }

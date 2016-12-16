@@ -1,15 +1,58 @@
-  <p> Welcome </p>
-          <span class="reauth-email"></span>
-            <input type="email"  placeholder="Username" required autofocus>
-            <input type="password"  placeholder="Password" required>
-                      <button >Login</button>
-                      <button >Sign up</button>
-                      <button >Forgot password</button>
-                      <p> Welcome </p>
-                      <input type="email" class="form-control" placeholder="Username" required autofocus>
-                      <input type="text" class="form-control" placeholder="First name" required>
-                      <input type="text" class="form-control" placeholder="Last name" required>
-                      <input type="password" class="form-control" placeholder="Password" required>
-                      <input type="password" class="form-control" placeholder="Confirmation" required>
-                      <button >Register</button>
-                      <button >Back to login</button>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+
+<div class="container">
+	<div class="row login_box">
+	    <div class="col-md-12 col-xs-12" align="center">
+            <div class="line"><h3>Welcome to FitGains</h3></div>
+            <div class="outter"><img src="./assets/images/logo-large.png" class="image-circle"/></div>
+            <h1>Hi Guest</h1>
+	    </div>
+
+        <div class="col-md-12 col-xs-12 login_control">
+
+            <div name= loginform *ngIf="action != 'signup'">
+                <div class="control">
+                    <div class="label">Email Address</div>
+                    <input type="text" name="loginemail" class="form-control" placeholder="example@gmail.com"/>
+                </div>
+
+                <div class="control">
+                     <div class="label">Password</div>
+                    <input type="password" name="loginpassword" class="form-control" placeholder="*******"/>
+                </div>
+                <div align="center">
+                     <button class="btn btn-orange" >LOGIN</button>
+                     <button class="btn btn-orange"(click)="action = 'signup'">SIGNUP</button>
+                     <button class="btn btn-orange"[routerLink]="['/home']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">SKIP</button>
+                </div>
+              </div>
+              <div name= signinform *ngIf="action == 'signup'">
+                <div class="control">
+                    <div class="label">Email Address</div>
+                    <input type="text" name="signupemail" class="form-control" placeholder="example@gmail.com"/>
+                </div>
+
+                <div class="control">
+                     <div class="label">Password</div>
+                    <input type="password" name="signuppassword" class="form-control" placeholder="*******"/>
+                </div>
+                <div class="control">
+                     <div class="label">First Name</div>
+                    <input type="text" name="signupname" class="form-control" placeholder="ExampleName"/>
+                </div>
+                <div class="control">
+                     <div class="label">Surname</div>
+                    <input type="text" name="signuplastname" class="form-control" placeholder="ExampleName"/>
+                </div>
+                <div align="center">
+                     <button class="btn btn-orange"(click)="action = 'login'">LOGIN</button>
+                     <button class="btn btn-orange">SIGNUP</button>
+                </div>
+              </div>
+
+        </div>
+
+
+
+    </div>
+</div>

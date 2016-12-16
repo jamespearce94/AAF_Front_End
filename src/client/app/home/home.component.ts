@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   errorMessage: string;
   names: any[] = [];
   todos: any[] = [{text: 'Activity',activityID: '1',activityDate: '15/12/2016', distance: '20'},{text:'James Activity', activityID: '2', activityDate:'10/12/2016', distance: '50'}];
-  todoData : any = { text : '' };
+  todoData : any = { text : '' ,activityDate : ''};
 
   /**
    * Creates an instance of the HomeComponent with the injected
